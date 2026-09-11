@@ -1,6 +1,7 @@
 import 'package:batch_18/task_manager/screens/cancel_task_screen.dart';
 import 'package:batch_18/task_manager/screens/completed_task_screen.dart';
-import 'package:batch_18/task_manager/screens/login_screen.dart';
+
+import 'package:batch_18/task_manager/screens/logout_screen.dart';
 import 'package:batch_18/task_manager/screens/new_task_screen.dart';
 import 'package:batch_18/task_manager/screens/progress_task_screen.dart';
 import 'package:flutter/material.dart';
@@ -45,10 +46,8 @@ class _MainNavScreenState extends State<MainNavScreen> {
               leading: Icon(Icons.logout),
               title: Text('Logout'),
               onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
-                );
+                Navigator.pop(context);
+                LogoutScreen.show(context);
               },
             ),
           ],

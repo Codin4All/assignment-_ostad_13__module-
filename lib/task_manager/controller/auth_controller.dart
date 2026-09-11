@@ -55,6 +55,12 @@ class AuthController {
     userData = model;
 
   }
+  static Future logout() async {
+  SharedPreferences sharedPreferences =
+      await SharedPreferences.getInstance();
 
+  await sharedPreferences.remove('user_data');
+  await sharedPreferences.remove('token');
+}
 
 }
