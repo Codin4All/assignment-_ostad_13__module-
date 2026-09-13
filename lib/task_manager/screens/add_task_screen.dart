@@ -1,4 +1,5 @@
 import 'package:task_manager/task_manager/models/api_response.dart';
+import 'package:task_manager/task_manager/models/task_model.dart';
 
 import 'package:task_manager/task_manager/screens/main_nav_screen.dart';
 import 'package:task_manager/task_manager/screens/sign_up_screen.dart';
@@ -10,7 +11,9 @@ import 'package:task_manager/task_manager/widgets/tm_appbar.dart';
 import 'package:flutter/material.dart';
 
 class AddNewTaskScreen extends StatefulWidget {
-  const AddNewTaskScreen({super.key});
+  final TaskModel? taskModel;
+
+  const AddNewTaskScreen({super.key, this.taskModel});
 
   @override
   State<AddNewTaskScreen> createState() => _AddNewTaskScreenState();
@@ -19,6 +22,17 @@ class AddNewTaskScreen extends StatefulWidget {
 class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
   TextEditingController titleController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+
+    if (widget.taskModel != null) {
+      titleController.text = widget.taskModel!.title ?? '';
+      descriptionController.text = widget.taskModel!.description ?? '';
+    }
+  }
+
   onTapSignUp() {
     Navigator.push(
       context,
@@ -35,19 +49,23 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
           padding: const EdgeInsets.all(35.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-
             children: [
               SizedBox(height: 150),
+
               Text(
-                'Add new Task',
+                widget.taskModel == null ? 'Add new Task' : 'Edit Task',
                 style: Theme.of(context).textTheme.titleLarge,
               ),
+
               SizedBox(height: 25),
+
               TextFormField(
                 controller: titleController,
                 decoration: InputDecoration(hintText: 'Title'),
               ),
+
               SizedBox(height: 25),
+
               TextFormField(
                 controller: descriptionController,
                 maxLines: 6,

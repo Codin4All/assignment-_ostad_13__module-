@@ -1,5 +1,6 @@
 import 'package:task_manager/task_manager/models/api_response.dart';
 import 'package:task_manager/task_manager/models/task_model.dart';
+import 'package:task_manager/task_manager/screens/add_task_screen.dart';
 import 'package:task_manager/task_manager/service/api_caller.dart';
 import 'package:task_manager/task_manager/utils/urls.dart';
 import 'package:flutter/material.dart';
@@ -152,6 +153,18 @@ class _TaskCardState extends State<TaskCard> {
                     showStatusChangeDialog();
                   },
                   icon: Icon(Icons.edit_note, color: Colors.orange),
+                ),
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            AddNewTaskScreen(taskModel: widget.taskModel),
+                      ),
+                    );
+                  },
+                  icon: Icon(Icons.edit, color: Colors.red),
                 ),
                 IconButton(
                   onPressed: () {
