@@ -1,5 +1,5 @@
 
-import 'package:batch_18/my_app.dart';
+import 'package:task_manager/my_app.dart';
 import 'package:flutter/cupertino.dart';
 
 main(){

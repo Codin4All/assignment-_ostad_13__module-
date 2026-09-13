@@ -1,4 +1,4 @@
-import 'package:batch_18/task_manager/screens/splash_screen.dart';
+import 'package:task_manager/task_manager/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -7,54 +7,42 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
       theme: ThemeData(
         textTheme: TextTheme(
-
-
           titleLarge: TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.w600,
-
-          )
+          ),
         ),
-
 
         inputDecorationTheme: InputDecorationTheme(
           fillColor: Colors.white,
           filled: true,
-          hintStyle: TextStyle(
-            color: Colors.grey
-          ),
+          hintStyle: TextStyle(color: Colors.grey),
 
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide.none
+            borderSide: BorderSide.none,
           ),
 
           border: OutlineInputBorder(
-            borderSide: BorderSide.none
+            borderSide: BorderSide.none,
           ),
         ),
-
 
         filledButtonTheme: FilledButtonThemeData(
           style: FilledButton.styleFrom(
             backgroundColor: Colors.green,
             fixedSize: Size.fromWidth(double.maxFinite),
-            padding: EdgeInsets.symmetric(
-              vertical: 12
-            ),
-            
+            padding: EdgeInsets.symmetric(vertical: 12),
+
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8)
-            )
-          )
-        )
-
-
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
+        ),
       ),
-      home: SplashScreen(),
 
+      home: SplashScreen(),
     );
   }
 }

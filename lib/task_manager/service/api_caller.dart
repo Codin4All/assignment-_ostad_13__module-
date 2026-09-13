@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:batch_18/task_manager/controller/auth_controller.dart';
-import 'package:batch_18/task_manager/models/api_response.dart';
+import 'package:task_manager/task_manager/controller/auth_controller.dart';
+import 'package:task_manager/task_manager/models/api_response.dart';
 import 'package:http/http.dart';
 
 class ApiCaller {

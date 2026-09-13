@@ -1,12 +1,12 @@
-import 'package:batch_18/task_manager/controller/auth_controller.dart';
-import 'package:batch_18/task_manager/models/api_response.dart';
-import 'package:batch_18/task_manager/models/user_model.dart';
-import 'package:batch_18/task_manager/screens/main_nav_screen.dart';
+import 'package:task_manager/task_manager/controller/auth_controller.dart';
+import 'package:task_manager/task_manager/models/api_response.dart';
+import 'package:task_manager/task_manager/models/user_model.dart';
+import 'package:task_manager/task_manager/screens/main_nav_screen.dart';
 
-import 'package:batch_18/task_manager/service/api_caller.dart';
-import 'package:batch_18/task_manager/utils/urls.dart';
-import 'package:batch_18/task_manager/widgets/screen_bg.dart';
-import 'package:batch_18/task_manager/widgets/tm_appbar.dart';
+import 'package:task_manager/task_manager/service/api_caller.dart';
+import 'package:task_manager/task_manager/utils/urls.dart';
+import 'package:task_manager/task_manager/widgets/screen_bg.dart';
+import 'package:task_manager/task_manager/widgets/tm_appbar.dart';
 import 'package:flutter/material.dart';
 
 class UpdateProfileScreen extends StatefulWidget {
@@ -41,26 +41,18 @@ class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
 
       body: requestbody,
     );
-   
-     
 
     if (response.isSuccess) {
-
-       UserModel model = UserModel(
+      UserModel model = UserModel(
         sId: AuthController.userData?.sId,
         email: emailController.text,
         firstName: firstNameController.text,
         lastName: lastNameController.text,
-        mobile: mobileController.text, 
-
-        
-
+        mobile: mobileController.text,
       );
-    
-    AuthController.updateUserData(model);
-    setState(() {
-      
-    });
+
+      AuthController.updateUserData(model);
+      setState(() {});
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => MainNavScreen()),

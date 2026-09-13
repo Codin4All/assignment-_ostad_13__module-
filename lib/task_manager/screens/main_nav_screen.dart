@@ -1,9 +1,9 @@
-import 'package:batch_18/task_manager/screens/cancel_task_screen.dart';
-import 'package:batch_18/task_manager/screens/completed_task_screen.dart';
+import 'package:task_manager/task_manager/screens/cancel_task_screen.dart';
+import 'package:task_manager/task_manager/screens/completed_task_screen.dart';
 
-import 'package:batch_18/task_manager/screens/logout_screen.dart';
-import 'package:batch_18/task_manager/screens/new_task_screen.dart';
-import 'package:batch_18/task_manager/screens/progress_task_screen.dart';
+import 'package:task_manager/task_manager/screens/logout_screen.dart';
+import 'package:task_manager/task_manager/screens/new_task_screen.dart';
+import 'package:task_manager/task_manager/screens/progress_task_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/tm_appbar.dart';

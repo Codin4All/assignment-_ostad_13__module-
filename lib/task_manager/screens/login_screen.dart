@@ -1,11 +1,11 @@
-import 'package:batch_18/task_manager/controller/auth_controller.dart';
-import 'package:batch_18/task_manager/models/api_response.dart';
-import 'package:batch_18/task_manager/models/user_model.dart';
-import 'package:batch_18/task_manager/screens/main_nav_screen.dart';
-import 'package:batch_18/task_manager/screens/sign_up_screen.dart';
-import 'package:batch_18/task_manager/service/api_caller.dart';
-import 'package:batch_18/task_manager/utils/urls.dart';
-import 'package:batch_18/task_manager/widgets/screen_bg.dart';
+import 'package:task_manager/task_manager/controller/auth_controller.dart';
+import 'package:task_manager/task_manager/models/api_response.dart';
+import 'package:task_manager/task_manager/models/user_model.dart';
+import 'package:task_manager/task_manager/screens/main_nav_screen.dart';
+import 'package:task_manager/task_manager/screens/sign_up_screen.dart';
+import 'package:task_manager/task_manager/service/api_caller.dart';
+import 'package:task_manager/task_manager/utils/urls.dart';
+import 'package:task_manager/task_manager/widgets/screen_bg.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 

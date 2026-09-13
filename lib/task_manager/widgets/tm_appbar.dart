@@ -1,5 +1,5 @@
-import 'package:batch_18/task_manager/controller/auth_controller.dart';
-import 'package:batch_18/task_manager/screens/update_profile_screen.dart';
+import 'package:task_manager/task_manager/controller/auth_controller.dart';
+import 'package:task_manager/task_manager/screens/update_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class TmAppBar extends StatelessWidget implements PreferredSize {
@@ -8,9 +8,7 @@ class TmAppBar extends StatelessWidget implements PreferredSize {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      iconTheme: IconThemeData(
-        color: Colors.white,
-      ),
+      iconTheme: IconThemeData(color: Colors.white),
       backgroundColor: const Color.fromARGB(255, 19, 15, 27),
       title: InkWell(
         onTap: () {

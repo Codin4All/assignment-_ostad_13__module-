@@ -1,6 +1,6 @@
-import 'package:batch_18/task_manager/controller/auth_controller.dart';
+import 'package:task_manager/task_manager/controller/auth_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:batch_18/task_manager/screens/login_screen.dart';
+import 'package:task_manager/task_manager/screens/login_screen.dart';
 
 class LogoutScreen {
   static void show(BuildContext context) {
@@ -15,7 +15,7 @@ class LogoutScreen {
               onPressed: () {
                 Navigator.pop(dialogContext);
               },
-              
+
               child: const Text('Cancel'),
             ),
             ElevatedButton(

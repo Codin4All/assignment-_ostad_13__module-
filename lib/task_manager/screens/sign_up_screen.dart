@@ -1,8 +1,8 @@
-import 'package:batch_18/task_manager/models/api_response.dart';
-import 'package:batch_18/task_manager/screens/login_screen.dart';
-import 'package:batch_18/task_manager/service/api_caller.dart';
-import 'package:batch_18/task_manager/utils/urls.dart';
-import 'package:batch_18/task_manager/widgets/screen_bg.dart';
+import 'package:task_manager/task_manager/models/api_response.dart';
+import 'package:task_manager/task_manager/screens/login_screen.dart';
+import 'package:task_manager/task_manager/service/api_caller.dart';
+import 'package:task_manager/task_manager/utils/urls.dart';
+import 'package:task_manager/task_manager/widgets/screen_bg.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -55,7 +55,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               children: [
                 SizedBox(height: 130),
                 Text(
-                  'Join with us',
+                  'Registration',
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 SizedBox(height: 25),

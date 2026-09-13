@@ -1,6 +1,6 @@
-import 'package:batch_18/task_manager/controller/auth_controller.dart';
-import 'package:batch_18/task_manager/screens/login_screen.dart';
-import 'package:batch_18/task_manager/screens/main_nav_screen.dart';
+import 'package:task_manager/task_manager/controller/auth_controller.dart';
+import 'package:task_manager/task_manager/screens/login_screen.dart';
+import 'package:task_manager/task_manager/screens/main_nav_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/asset_path.dart';
@@ -14,7 +14,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     // TODO: implement initState
@@ -27,14 +26,22 @@ class _SplashScreenState extends State<SplashScreen> {
     AuthController.getUserData();
     bool isLogin = await AuthController.isUserLogin();
 
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>isLogin ? MainNavScreen() : LoginScreen()));
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => isLogin ? MainNavScreen() : LoginScreen(),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ScreenBG(child: Center(child: Image.asset(AssetPath.book, width: 300,height: 300,)),),
+      body: ScreenBG(
+        child: Center(
+          child: Image.asset(AssetPath.book, width: 300, height: 300),
+        ),
+      ),
     );
   }
 }
-
